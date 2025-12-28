@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     DEBUG: bool = True
     
     class Config:
-        env_file = ".env"
+        env_file = ".env"   # tells pydantic to load from .env
 
 @lru_cache()
 def get_settings():
